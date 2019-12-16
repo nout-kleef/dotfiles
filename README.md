@@ -2,7 +2,7 @@
 
 ## usage
 1) `cd ~`
-2) `git clone https://github.com/nout-kleef/.vim.git .vim`
+2) `git clone https://github.com/nout-kleef/vim-setup.git .vim`
 3) `cd .vim`
 4) `./export_vimrc.sh`
 
