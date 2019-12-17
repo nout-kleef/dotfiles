@@ -1,12 +1,12 @@
-# vim-setup
+# dotfiles
 
 ## usage
 1) `cd ~`
-2) `git clone https://github.com/nout-kleef/vim-setup.git .vim`
-3) `cd .vim`
-4) `./export_vimrc.sh`
+2) `git clone https://github.com/nout-kleef/dotfiles.git`
+3) `cd dotfiles`
+4) `./export.sh`
 
-## updating central `.vimrc`
-1) `cd ~/.vim`
-2) `./import_vimrc.sh`
+## updating central dotfiles
+1) `cd ~/dotfiles`
+2) `./import.sh`
 3) commit 'n push
