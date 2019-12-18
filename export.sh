@@ -7,7 +7,7 @@ rm ~/.vimrc
 rm ~/.bashrc
 
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-cp -r .vim/bundle ~/.vim/
+cp -r .vim ~
 cp .vimrc ~/.vimrc
 echo "set up vim environment."
 
