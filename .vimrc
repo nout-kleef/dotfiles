@@ -2,7 +2,7 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
-" ask for confirmation instead
+set number
 set confirm
 
 if has('autocmd') " ignore this section if your vim does not support autocommands
