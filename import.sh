@@ -9,6 +9,10 @@ rm -rf .vim
 rm .vimrc
 rm .ssh/config
 rm .bashrc
+rm .config/Code/User/settings.json
+
+cp ~/.bashrc .bashrc
+echo "imported bash environment into repository."
 
 cp -r ~/.vim .
 cp ~/.vimrc .vimrc
@@ -17,7 +21,7 @@ echo "imported vim environment into repository."
 cp ~/.ssh/config .ssh
 echo "imported ssh user configuration file."
 
-cp ~/.bashrc .bashrc
-echo "imported bash environment into repository."
+cp ~/.config/Code/User/settings.json .config/Code/User/settings.json
+echo "imported VSCode environment into repository."
 
 echo "done!"
