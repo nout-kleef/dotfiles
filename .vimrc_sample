@@ -8,7 +8,7 @@ set confirm
 if has('autocmd') " ignore this section if your vim does not support autocommands
     " latex-live-preview stuff
     autocmd FileType tex setl updatetime=1
-    let g:livepreview_previewer = 'mupdf'
+    " let g:livepreview_previewer = 'evince'
     " automatically reload vimrc upon save
     augroup reload_vimrc
         autocmd!
