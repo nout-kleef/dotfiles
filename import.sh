@@ -2,7 +2,7 @@
 
 # vim
 echo "importing vim environment into repository.."
-cp -r ~/.vim/bundle bundle
+cp -r ~/.vim/bundle .
 cp ~/.vimrc .vimrc_sample
 
 # bash environment, aliases and stuff
