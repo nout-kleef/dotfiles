@@ -1,19 +1,20 @@
 #!/bin/bash
 
-# clean
 echo "cleaning.."
 rm -rf ~/.vim
+rm ~/.ssh/config
 rm ~/.vimrc
 rm ~/.bashrc
 
-# vim
-echo "setting up vim environment.."
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-cp -r bundle ~/.vim/
-cp .vimrc_sample ~/.vimrc
+cp -r .vim/bundle ~/.vim/
+cp .vimrc ~/.vimrc
+echo "set up vim environment."
 
-# bash environment, aliases and stuff
-echo "setting up bash environment.."
-cp .bashrc_sample ~/.bashrc
+cp .ssh/config ~/.ssh/config
+echo "set up ssh user configuration."
+
+cp .bashrc ~/.bashrc
+echo "set up bash environment."
 
 echo "done!"
