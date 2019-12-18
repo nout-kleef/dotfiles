@@ -4,7 +4,13 @@
 # it preserves the directory structure. e.g.:
 # 	~/.vim/bundle/<plugin> --> .vim/bundle/<plugin>
 
-cp -r ~/.vim/bundle .vim/bundle
+echo "cleaning.."
+rm -rf .vim
+rm .vimrc
+rm .ssh/config
+rm .bashrc
+
+cp -r ~/.vim .
 cp ~/.vimrc .vimrc
 echo "imported vim environment into repository."
 
