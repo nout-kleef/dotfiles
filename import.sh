@@ -9,9 +9,11 @@ rm -rf .vim
 rm .vimrc
 rm .ssh/config
 rm .bashrc
+rm .bash_aliases
 rm .config/Code/User/settings.json
 
 cp ~/.bashrc .bashrc
+cp ~/.bash_aliases .bash_aliases
 echo "imported bash environment into repository."
 
 cp -r ~/.vim .
