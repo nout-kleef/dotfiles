@@ -1,0 +1,42 @@
+snippet bf "bold text" w
+\textbf{$1}$0
+endsnippet
+
+snippet ut "underlined text" w
+\underline{$1}$0
+endsnippet
+
+snippet it "italic text" w
+\textit{$1}$0
+endsnippet
+
+snippet note "NB" w
+\textbf{NB}: $0
+endsnippet
+
+snippet thm "theorem" b
+\nTheorem{$1}{
+$2
+}
+$0
+endsnippet
+
+snippet def "definition" b
+\nDefinition{$1}{
+$2
+}
+$0
+endsnippet
+
+snippet maex "mathematical example" b
+\nExample{$1}{
+$2
+\begin{question}
+	$3
+\end{question}
+\begin{solution}
+	$4
+\end{solution}
+}
+$0
+endsnippet

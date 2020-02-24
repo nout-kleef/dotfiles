@@ -1,1 +1,1 @@
-alias nightnight="sudo killall redshift; sudo redshift </dev/null &>/dev/null &"
+alias nightnight="killall redshift; redshift </dev/null &>/dev/null &"

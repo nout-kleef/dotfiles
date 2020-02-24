@@ -7,3 +7,6 @@
 [submodule "bundle/vim-latex-live-preview"]
 	path = bundle/vim-latex-live-preview
 	url = https://github.com/xuhdev/vim-latex-live-preview.git
+[submodule ".vim/plugged/tex-conceal.vim"]
+	path = .vim/plugged/tex-conceal.vim
+	url = https://github.com/KeitaNakamura/tex-conceal.vim
