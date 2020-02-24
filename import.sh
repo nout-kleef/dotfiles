@@ -12,14 +12,15 @@ rm .bashrc
 rm .bash_aliases
 rm .config/Code/User/settings.json
 
-cp ~/.bashrc .bashrc
-cp ~/.bash_aliases .bash_aliases
+cp ~/.bashrc .
+cp ~/.bash_aliases .
 echo "imported bash environment into repository."
 
 cp -r ~/.vim .
-cp ~/.vimrc .vimrc
+cp ~/.vimrc .
 echo "imported vim environment into repository."
 
+## no longer tracking ssh config
 cp ~/.ssh/config .ssh
 echo "imported ssh user configuration file."
 
