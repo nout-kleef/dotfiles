@@ -55,9 +55,25 @@ if [ -n "$force_color_prompt" ]; then
 	color_prompt=
     fi
 fi
+# ::: PS1 :::
+
+USER='\[\033[01;32m\]\u' # begin starts bold green
+HOST='\h\[\033[0m\]' # ending resets style
+DIR='──[\[\033[01;34m\]\w\[\033[0m\]]' # blue pwd w/ white brackets
+GIT=$(git_branch)
+PROMPT='\n\[\033[01;32m\]└─ \$ ▶\[\033[0m\] ' # bold green; ends w/ reset
+
+# adds git branch for git repos
+source /usr/share/git-core/contrib/completion/git-prompt.sh
+gb() {
+        echo -n '──[' && git branch 2>/dev/null | grep '^*' | colrm 1 2 | tr -d '\n' && echo  -n ']'
+}
+git_branch() {
+	gb | sed -r 's/\[(.+)\]/[\\[\\033[01;34m\\]\1\\[\\033[0m\\]]/'
+}
 
 if [ "$color_prompt" = yes ]; then
-    PS1='\[\033[01;32m\]  \u@\h\[\033[01;37m\] [\[\033[01;34m\]\w\[\033[38;5;33m\]\[\033[01;37m\]]  \[\033[01;37m\]\n\$ '
+	PS1=${USER}'@'${HOST}${DIR}${GIT}${PROMPT}
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
