@@ -62,7 +62,9 @@ gb() {
         echo -n '──[' && git branch 2>/dev/null | grep '^*' | colrm 1 2 | tr -d '\n' && echo  -n ']'
 }
 git_branch() {
-	gb | sed -r 's/\[(.+)\]/[\\[\\033[01;34m\\]\1\\[\\033[0m\\]]/'
+	gb | sed -re 's/\[(.+)\]/[\\[\\033[01;34m\\]\1\\[\\033[0m\\]]/' \
+	-re 's/──\[\]//' \
+	-re 's/master/\\[\\033[33;1m\\]master\\[\\033[0m\\]/'
 }
 update_PS1() {
 	if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
