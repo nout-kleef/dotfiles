@@ -1,7 +1,6 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -41,6 +40,7 @@ case "$TERM" in
 esac
 
 # ::: PS1 :::
+#set -x
 RESET="\[\017\]"
 NORMAL="\[\033[0m\]"
 RED="\[\033[31;1m\]"
@@ -53,7 +53,6 @@ SELECT="if [ \$? = 0 ]; then echo \"${SMILEY}\"; else echo \"${FROWNY}\"; fi"
 USER='\[\033[01;32m\]\u' # begin starts bold green
 HOST='\h\[\033[0m\]' # ending resets style
 DIR='──[\[\033[01;34m\]\w\[\033[0m\]]' # blue pwd w/ white brackets
-GIT=$(git_branch)
 PROMPT='\n\[\033[01;32m\]└─ \$ ▶\[\033[0m\] ' # bold green; ends w/ reset
 
 # adds git branch for git repos
@@ -75,7 +74,7 @@ update_PS1() {
 }
 
 PROMPT_COMMAND=update_PS1
-
+#set +x
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
